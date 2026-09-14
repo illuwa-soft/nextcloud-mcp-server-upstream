@@ -19,7 +19,7 @@ RUN apt update && apt install --no-install-recommends --no-install-suggests -y \
 ENV UV_PROJECT_ENVIRONMENT=/opt/venv
 WORKDIR /src
 
-COPY pyproject.toml uv.lock README.md .
+COPY pyproject.toml uv.lock README.md ./
 
 # --no-build: every third-party dependency must arrive as a wheel, so no
 # dependency's setup.py executes at image-build time (docker:S8541). This is
